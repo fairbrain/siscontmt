@@ -11,6 +11,11 @@ closeNav.addEventListener("click",(e)=>{
     navMenu.classList.remove("active");
 })
 
+const preloader = document.getElementById("preloader");
+setTimeout(()=>{
+    preloader.classList.add("hide");
+},2000)
+
 // LENIS
 
 // Initialize Lenis with smooth scroll options

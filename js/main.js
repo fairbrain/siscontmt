@@ -14,7 +14,7 @@ closeNav.addEventListener("click",(e)=>{
 const preloader = document.getElementById("preloader");
 setTimeout(()=>{
     preloader.classList.add("hide");
-},2000)
+},1000)
 
 // LENIS
 

@@ -241,6 +241,13 @@ body {
     scale: 0.95;
 }
 
+.hero_left{
+    width: 50%;
+position: absolute;
+top: 100px;
+left: 50px;
+}
+
 .hero-content {
     width: 100%;
     position: absolute;
@@ -250,7 +257,7 @@ body {
     bottom: 0;
     display: flex;
     justify-content: center;
-    align-items: end;
+    align-items: start;
 }
 
 .video-background {
@@ -658,6 +665,7 @@ footer .grid-col:nth-child(4) a {
 }
 
 @media(max-width: 768px) {
+
     .navbar-brand img {
         width: 150px;
     }
@@ -666,9 +674,9 @@ footer .grid-col:nth-child(4) a {
         inset: 0;
     }
 
-    .hero-section {
+    /* .hero-section {
         height: 80vh;
-    }
+    } */
 
     .ball:nth-child(1) {
         top: 30%;
@@ -701,5 +709,12 @@ footer .grid-col:nth-child(4) a {
     footer .container {
         grid-template-columns: 1fr;
         padding: 2rem;
+    }
+
+    .hero_left{
+        position: initial;
+    }
+    .hero-content{
+        height: auto;
     }
 }

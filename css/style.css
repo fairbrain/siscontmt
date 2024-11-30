@@ -209,7 +209,7 @@ body {
 
 .hero-section {
     width: 100%;
-    height: calc(125vh - 77.88px);
+    /* height: calc(125vh - 77.88px); */
 }
 
 .hero-section h1 span {
@@ -674,9 +674,9 @@ footer .grid-col:nth-child(4) a {
         inset: 0;
     }
 
-    /* .hero-section {
+    .hero-section {
         height: 80vh;
-    } */
+    }
 
     .ball:nth-child(1) {
         top: 30%;

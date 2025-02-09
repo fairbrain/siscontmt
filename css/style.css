@@ -10,6 +10,10 @@
     src: url(../Fonts/Rockstar-ExtraBold.otf);
 }
 
+.font-oswald {
+    font-family: "Oswald", serif;
+}
+
 .font-myriad {
     font-family: myriadpro;
 }
@@ -269,7 +273,7 @@ body {
     position: absolute;
     background: linear-gradient(to right, #4b4949f6, #77aee58a);
     /* backdrop-filter: blur(10px); */
-   top: 0;
+    top: 0;
 }
 
 .video-background {
@@ -640,6 +644,43 @@ footer .grid-col:nth-child(4) a {
     margin-bottom: 1rem;
 }
 
+/* breadcrumb */
+
+.bread-crumb {
+    height: 250px;
+    background: url(../images/breadcrumb\ image.jpg) no-repeat center/cover;
+}
+
+.breadcrumb-content {
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.breadcrumb-content h2 {
+    color: #E2000F;
+    font-size: clamp(25px,10vw,70px);
+    background-color: white;
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+.glassmorph{
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+}
+
+.text-custom-red{
+    color: #E2000F;
+}
+
 
 
 /* RESPONSIVE MEDIA QUERIES */
@@ -729,7 +770,7 @@ footer .grid-col:nth-child(4) a {
         position: initial;
     }
 
-    .hero-content{
+    .hero-content {
         display: flex;
         justify-content: end;
         align-items: end;

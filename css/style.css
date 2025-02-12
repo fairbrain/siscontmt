@@ -251,6 +251,12 @@ body {
     margin-bottom: 1.5rem;
 }
 
+.hero-content .container-fluid,
+.hero-content .container-fluid .row,
+.hero-content .container-fluid .row .hero-image {
+    height: 100% ;
+}
+
 .hero-btns a {
     transition: 0.3s;
 }
@@ -664,22 +670,23 @@ footer .grid-col:nth-child(4) a {
 
 .breadcrumb-content h2 {
     color: #E2000F;
-    font-size: clamp(25px,10vw,70px);
+    font-size: clamp(25px, 10vw, 70px);
     background-color: white;
     display: inline-block;
     padding: 10px 20px;
 }
 
-.glassmorph{
+.glassmorph {
     background: rgba(255, 255, 255, 0.05);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(2px);
     -webkit-backdrop-filter: blur(2px);
 }
 
-.text-custom-red{
+.text-custom-red {
     color: #E2000F;
 }
+
 
 
 
@@ -719,13 +726,14 @@ footer .grid-col:nth-child(4) a {
 
 }
 
+
+
 @media(max-width: 768px) {
 
-    .hero-content .container-fluid ,
+    .hero-content .container-fluid,
     .hero-content .container-fluid .row,
-    .hero-content .container-fluid .row .hero-image
-    {
-        height : auto !important;
+    .hero-content .container-fluid .row .hero-image {
+        height: auto !important;
     }
 
     .navbar-brand img {

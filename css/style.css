@@ -251,9 +251,9 @@ body {
     margin-bottom: 1.5rem;
 }
 
-.hero-content .container-fluid,
-.hero-content .container-fluid .row,
-.hero-content .container-fluid .row .hero-image {
+.hero-content .container-lg-fluid,
+.hero-content .container-lg-fluid .row,
+.hero-content .container-lg-fluid .row .hero-image {
     height: 100% ;
 }
 

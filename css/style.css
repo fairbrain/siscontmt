@@ -721,6 +721,13 @@ footer .grid-col:nth-child(4) a {
 
 @media(max-width: 768px) {
 
+    .hero-content .container-fluid ,
+    .hero-content .container-fluid .row,
+    .hero-content .container-fluid .row .hero-image
+    {
+        height : auto !important;
+    }
+
     .navbar-brand img {
         width: 150px;
     }

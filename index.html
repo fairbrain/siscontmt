@@ -271,26 +271,26 @@
                 data-aos-easing="ease-in-sine">
                 <div class="row">
                     <div class="col-md-3">
-                        <p class="count text-white fs-1 fw-bolder mb-0" data-target="15">
-                            15+
+                        <p class="text-white fs-1 fw-bolder mb-0">
+                            <span class="count"  data-target="15">0</span><span>+</span>
                         </p>
                         <p class="count-desc">Years Experience</p>
                     </div>
                     <div class="col-md-3">
-                        <p class="count text-white fs-1 fw-bolder mb-0" data-target="1000">
-                            1000+
+                        <p class=" text-white fs-1 fw-bolder mb-0" >
+                            <span class="count"  data-target="1000">0</span><span>+</span>
                         </p>
                         <p class="count-desc">Happy Clients</p>
                     </div>
                     <div class="col-md-3">
-                        <p class="count text-white fs-1 fw-bolder mb-0" data-target="99.9">
-                            99.9%
+                        <p class="text-white fs-1 fw-bolder mb-0" >
+                            <span class="count"  data-target="99.9">0</span><span>+</span>
                         </p>
                         <p class="count-desc">Quality Rate</p>
                     </div>
                     <div class="col-md-3">
-                        <p class="count text-white fs-1 fw-bolder mb-0" data-target="10000">
-                            10,000+
+                        <p class="text-white fs-1 fw-bolder mb-0" >
+                            <span class="count"  data-target="10000"></span><span>+</span>
                         </p>
                         <p class="count-desc">Projects Completed</p>
                     </div>
@@ -492,42 +492,37 @@
         AOS.init();
     </script>
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const counters = document.querySelectorAll('.count');
-
-            counters.forEach(counter => {
-                const updateCount = () => {
-                    const target = +counter.getAttribute('data-target');
-                    const current = +counter.innerText.replace(/[^0-9.]/g, ''); // Remove non-numeric
-
-                    const speed = 200; // Lower = faster
-                    const increment = target / speed;
-
-                    if (current < target) {
-                        const newVal = Math.min(current + increment, target);
-                        counter.innerText = formatNumber(newVal, target) + getSymbol(counter.innerText);
-                        requestAnimationFrame(updateCount);
-                    } else {
-                        counter.innerText = formatNumber(target, target) + getSymbol(counter.innerText);
-                    }
-                };
-
-                updateCount();
-            });
-
-            function formatNumber(value, target) {
-                if (target >= 1000) {
-                    return Math.floor(value).toLocaleString();
+        function animateCounter(el, target, duration) {
+            let start = 0;
+            const increment = target / (duration / 16);
+            const timer = setInterval(() => {
+                start += increment;
+                if (start >= target) {
+                    el.textContent = target.toLocaleString();
+                    clearInterval(timer);
                 } else {
-                    return value.toFixed(1).replace(/\.0$/, '');
+                    el.textContent = Math.floor(start).toLocaleString();
                 }
-            }
+            }, 16);
+        }
 
-            function getSymbol(text) {
-                if (text.includes('%')) return '%';
-                if (text.includes('+')) return '+';
-                return '';
-            }
+        // Intersection Observer to start when visible
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const el = entry.target;
+                        const target = parseInt(el.getAttribute("data-target"), 10);
+                        animateCounter(el, target, 2000);
+                        observer.unobserve(el); // run only once
+                    }
+                });
+            },
+            { threshold: 0.5 }
+        );
+
+        document.querySelectorAll(".count").forEach(num => {
+            observer.observe(num);
         });
     </script>
 </body>

@@ -18,7 +18,14 @@
 </head>
 
 <body>
+    <aside class="preloader" id="preloader">
+        <div class="preload-content d-flex flex-column align-items-center">
+            <span class="loader"></span>
+            <img src="./images/logo-01.png" alt="logo"
+                class="animate__animated animate__flash animate__slow animate__infinite">
 
+        </div>
+    </aside>
     <!-- Header -->
     <header id="header"
         class="sticky-top border-bottom d-flex justify-content-between align-items-center px-lg-5 px-3 py-3">
@@ -186,9 +193,13 @@
         <p class="copyright text-center text-light py-2">© Copyright Siscon TMT All Rights Reserved</p>
     </footer>
 
-    <!-- JS Files -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap Js bunle cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom JS -->
+    <script src="./js/main.js"></script>
     <script>
         AOS.init();
     </script>

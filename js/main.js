@@ -2,11 +2,11 @@ const navBtn = document.getElementById("nav-btn");
 const closeNav = document.getElementById("close-nav");
 const navMenu = document.querySelector(".nav-list");
 
-navBtn.addEventListener("click",(e)=>{
+navBtn?.addEventListener("click",(e)=>{
     e.preventDefault();
     navMenu.classList.add("active");
 })
-closeNav.addEventListener("click",(e)=>{
+closeNav?.addEventListener("click",(e)=>{
     e.preventDefault();
     navMenu.classList.remove("active");
 })

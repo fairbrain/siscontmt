@@ -1,13 +1,52 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+/* @font-face {
+    font-family: madeTommy;
+    src: url(../Fonts/MADE\ TOMMY\ Regular_PERSONAL\ USE.otf);
+} */
+
 @font-face {
-    font-family: myriadpro;
-    src: url(../Fonts/MyriadPro-Regular.otf);
+    font-family: madeTommy;
+    src: url('../Fonts/MADE\ TOMMY\ Light_PERSONAL\ USE.otf');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: madeTommy;
+    src: url('../Fonts/MADE\ TOMMY\ Regular_PERSONAL\ USE.otf');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: madeTommy;
+    src: url('../Fonts/MADE\ TOMMY\ Medium_PERSONAL\ USE.otf');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: madeTommy;
+    src: url('../Fonts/MADE\ TOMMY\ Bold_PERSONAL\ USE.otf');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: madeTommy;
+    src: url('../Fonts/MADE\ TOMMY\ ExtraBold_PERSONAL\ USE.otf');
+    font-weight: 900;
+    font-style: normal;
 }
 
 @font-face {
     font-family: rockstar;
     src: url(../Fonts/Rockstar-ExtraBold.otf);
+}
+
+.font-light {
+    font-weight: 200;
 }
 
 .font-oswald {
@@ -145,7 +184,8 @@ body {
     width: 100%;
     height: 100%;
     background: #000000;
-    font-family: "Poppins", sans-serif;
+    /* font-family: "Poppins", sans-serif; */
+    font-family: madeTommy;
     overflow-x: hidden;
 }
 
@@ -200,6 +240,7 @@ body {
     color: #413f3f;
     padding: 0.2rem 1rem;
     border: 2px solid transparent;
+    font-weight: 300;
 }
 
 .nav-list li a:hover,
@@ -253,6 +294,10 @@ body {
 
 .welcome-to h2 span:nth-child(4) {
     color: var(--text-color-1);
+}
+
+.welcome-to p {
+    font-weight: 200;
 }
 
 .hero-section h1 span:nth-child(4) {
@@ -316,10 +361,12 @@ body {
 .hero-btns a:first-child {
     background-color: #E2000F !important;
     backdrop-filter: blur(2px);
+    font-weight: 200;
 }
 
 .hero-btns a:nth-child(2) {
     color: #E2000F !important;
+    font-weight: 200;
 }
 
 /*  */
@@ -400,6 +447,25 @@ body {
     border-radius: 0.5rem;
 }
 
+.why-choose-us {
+    background-color: #f8fafc;
+}
+
+why-choose-us .quality-type {
+    background-color: white;
+}
+
+.why-choose-us .quality-type img {
+    width: 50px;
+    background-color: #cbdefe;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.why-choose-us .quality-type p {
+    color: darkgray;
+}
+
 /*  */
 
 .constructions,
@@ -457,7 +523,13 @@ body {
     background: linear-gradient(to right, #e10810, #e05918);
 }
 
-.quality-type {
+.infographics .count-desc {
+    font-weight: 200;
+    font-size: 22px;
+    color: white;
+}
+
+.quality-standards .quality-type {
     background-color: whitesmoke;
     text-align: center;
     padding: 1rem;
@@ -466,16 +538,16 @@ body {
     transition: 0.5s;
 }
 
-.quality-type:hover {
+.quality-standards .quality-type:hover {
     scale: 1.05;
 }
 
-.quality-type h3 {
+.quality-standards .quality-type h3 {
     font-size: clamp(20px, 2vw, 22px);
     font-weight: 700;
 }
 
-.quality-type h3::after {
+.quality-standards .quality-type h3::after {
     content: "";
     height: 3px;
     width: 120px;
@@ -484,12 +556,14 @@ body {
     margin: 0.5rem auto;
 }
 
-.quality-type p {
+.quality-standards .quality-type p {
     font-size: clamp(12px, 2vw, 14px);
     text-wrap: balance;
+    color: darkgray;
+    font-weight: 200;
 }
 
-.quality-type img {
+.quality-standards .quality-type img {
     width: 150px;
 }
 
@@ -572,7 +646,7 @@ body {
 }
 
 .customized-tmt ul li {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .customized-tmt img {
@@ -582,6 +656,10 @@ body {
 .customized-tmt img:hover {
     scale: 0.95;
     filter: grayscale(1);
+}
+
+.product-range li span {
+    font-weight: 200;
 }
 
 /*  */
@@ -690,13 +768,114 @@ footer .grid-col:nth-child(4) a {
 
 /* breadcrumb */
 
-.bread-crumb {
-    height: 250px;
-    background: url(../images/breadcrumb\ image.jpg) no-repeat center/cover;
+.bread-crumb,
+.price-card {
+    background: linear-gradient(to right, #e10810, #e05918);
 }
 
-.breadcrumb-content {
-    /* From https://css.glass */
+.price-card {
+    margin-top: 40px;
+}
+
+.bread-crumb p {
+    font-weight: 200;
+}
+
+.price-list-content {
+    height: 90%;
+    border-radius: 40px;
+}
+
+.price-list-content ul li {
+    border-bottom: 1px solid black;
+    padding-bottom: 50px;
+}
+
+.video-section {
+    height: 350px;
+    background: linear-gradient(rgba(0, 0, 0, 0.582), rgba(0, 0, 0, 0.466)), url(../images/workers-examining-work\ \(1\).jpg) no-repeat center/cover;
+}
+
+.playbtn {
+    display: flex;
+    height: 70px;
+    width: 70px;
+    background-color: rgba(255, 255, 255, 0.637);
+    border: 3px solid #ffffff;
+    color: #E2000F;
+    font-size: 60px;
+    justify-content: center;
+    align-items: center;
+}
+
+.media-filter ul li,
+.tag,
+.prod-name {
+    border-radius: 25px;
+    padding: 5px 20px;
+
+}
+
+.media-filter ul li.active,
+.media-filter ul li:hover,
+.tag,
+.prod-name {
+    background: linear-gradient(to right, #e10810, #e05918);
+    color: white;
+}
+
+.manufacture-img1 {
+    background: linear-gradient(to right, #e10810, #e05918);
+}
+
+.manufacture-img1 img {
+    position: relative;
+    left: 100px;
+    height: 350px;
+    width: 100%;
+    border-radius: 25px;
+    object-fit: cover;
+}
+
+.manufacture-img2 img {
+    position: relative;
+    right: 100px;
+    height: 350px;
+    width: 100%;
+    border-radius: 25px;
+    object-fit: cover;
+}
+
+.manufacture-img2 {
+    background: linear-gradient(to left, #e10810, #e05918);
+}
+
+.tag {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.media-card img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.media-card h3 {
+    color: #E2000F;
+}
+
+.product-info p{
+    font-size: 12px;
+    color: #716c6c;
+    font-weight: 200;
+}
+
+/* .breadcrumb-content {
     background: rgba(255, 255, 255, 0.05);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(2px);
@@ -704,25 +883,36 @@ footer .grid-col:nth-child(4) a {
     display: flex;
     justify-content: center;
     align-items: center;
-}
+} */
 
-.breadcrumb-content h2 {
+/* .breadcrumb-content h2 {
     color: #E2000F;
     font-size: clamp(25px, 10vw, 70px);
     background-color: white;
     display: inline-block;
     padding: 10px 20px;
-}
+} */
 
-.glassmorph {
+/* .glassmorph {
     background: rgba(255, 255, 255, 0.05);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(2px);
     -webkit-backdrop-filter: blur(2px);
-}
+} */
 
 .text-custom-red {
     color: #E2000F;
+}
+
+.mission-vision h2 {
+    color: #e10810;
+}
+
+.rod {
+    position: absolute;
+    top: -150px;
+    right: 0;
+    scale: 1.2;
 }
 
 
@@ -829,16 +1019,16 @@ footer .grid-col:nth-child(4) a {
         align-items: end;
     }
 
-    .nav-list li a{
+    .nav-list li a {
         color: white;
     }
 
-    .hero-btns a{
+    .hero-btns a {
         font-size: 10px !important;
         text-wrap: nowrap;
     }
 
-    .hero-btns{
+    .hero-btns {
         padding-left: 50px;
     }
 }

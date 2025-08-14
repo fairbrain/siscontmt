@@ -1020,6 +1020,7 @@ footer .grid-col:nth-child(4) a {
 
     .hero_left {
         position: initial;
+        margin-top: 100px;
     }
 
     .hero-content {
@@ -1040,4 +1041,13 @@ footer .grid-col:nth-child(4) a {
     .hero-btns {
         padding-left: 50px;
     }
+}
+
+@media(max-width:600px) {
+    .hero-image {
+        object-fit: contain;
+        object-position: bottom;
+    }
+
+
 }

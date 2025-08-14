@@ -924,7 +924,13 @@ footer .grid-col:nth-child(4) a {
     scale: 1.2;
 }
 
+.product-info{
+    padding: 15px;
+}
 
+.media-filter li{
+    margin-bottom: 10px;
+}
 
 
 /* RESPONSIVE MEDIA QUERIES */
@@ -966,6 +972,10 @@ footer .grid-col:nth-child(4) a {
 
 
 @media(max-width: 768px) {
+
+    .rod{
+        position: initial;
+    }
 
     .hero-content .container-fluid,
     .hero-content .container-fluid .row,

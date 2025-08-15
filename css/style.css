@@ -924,11 +924,23 @@ footer .grid-col:nth-child(4) a {
     scale: 1.2;
 }
 
-.product-info{
+.product-info {
     padding: 15px;
 }
 
-.media-filter li{
+.text-truncate-multiline {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    /* show first 4 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.read-more-btn{
+    color: #000000;
+}
+
+.media-filter li {
     margin-bottom: 10px;
 }
 
@@ -973,7 +985,7 @@ footer .grid-col:nth-child(4) a {
 
 @media(max-width: 768px) {
 
-    .rod{
+    .rod {
         position: initial;
     }
 

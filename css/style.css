@@ -919,9 +919,31 @@ footer .grid-col:nth-child(4) a {
 
 .rod {
     position: absolute;
-    top: -150px;
+    top: -30px;
     right: 0;
-    scale: 1.2;
+    scale: 1;
+}
+
+/* Sidebar tabs styling */
+.list-group-item {
+    margin-bottom: 8px;
+    /* gap between tabs */
+    border-radius: 6px;
+    border: 1px solid #ddd;
+}
+
+/* Active tab color */
+.list-group-item.active {
+    background-color: #e10810;
+    border-color: #e10810;
+    color: #fff;
+    font-weight: 600;
+}
+
+/* Hover effect */
+.list-group-item:hover {
+    background-color: #e10810;
+    color: #fff;
 }
 
 .product-info {
@@ -1003,6 +1025,51 @@ footer .grid-col:nth-child(4) a {
 .gallery-page a:hover::before,
 .gallery-page a:hover::after {
     opacity: 1;
+}
+
+
+.custom-swiper-button-next {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    padding: 15px 2px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.custom-swiper-button-prev {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    padding: 15px 2px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .about-us-page img {
+        float: none !important;
+        display: block;
+        margin: 0 auto 20px auto;
+        max-width: 100% !important;
+    }
+}
+
+.custom-swiper-button-prev:hover,
+.custom-swiper-button-next:hover {
+    background: rgba(0, 0, 0, 0.8);
 }
 
 

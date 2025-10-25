@@ -83,32 +83,33 @@
                                 data-bs-toggle="tab" data-bs-target="#jharkhand" type="button" role="tab">
                                 Jharkhand
                             </button>
-                            <button class="list-group-item list-group-item-action" id="bihar-tab" data-bs-toggle="tab"
-                                data-bs-target="#bihar" type="button" role="tab">
-                                Bihar
-                            </button>
-                            <button class="list-group-item list-group-item-action" id="westbengal-tab"
-                                data-bs-toggle="tab" data-bs-target="#westbengal" type="button" role="tab">
-                                West Bengal
-                            </button>
-                            <button class="list-group-item list-group-item-action" id="assam-tab" data-bs-toggle="tab"
-                                data-bs-target="#assam" type="button" role="tab">
-                                Assam
-                            </button>
-                            <button class="list-group-item list-group-item-action" id="odisha-tab" data-bs-toggle="tab"
-                                data-bs-target="#odisha" type="button" role="tab">
-                                Odisha
-                            </button>
-                            <button class="list-group-item list-group-item-action" id="up-tab" data-bs-toggle="tab"
-                                data-bs-target="#up" type="button" role="tab">
-                                Uttar Pradesh
-                            </button>
                             <button class="list-group-item list-group-item-action" id="rajasthan-tab"
                                 data-bs-toggle="tab" data-bs-target="#rajasthan" type="button" role="tab">
                                 Rajasthan
                             </button>
+                            <button class="list-group-item list-group-item-action" id="bihar-tab" data-bs-toggle="tab"
+                                data-bs-target="#bihar" type="button" role="tab" disabled>
+                                Bihar
+                            </button>
+                            <button class="list-group-item list-group-item-action" id="westbengal-tab"
+                                data-bs-toggle="tab" data-bs-target="#westbengal" type="button" role="tab" disabled>
+                                West Bengal
+                            </button>
+                            <button class="list-group-item list-group-item-action" id="assam-tab" data-bs-toggle="tab"
+                                data-bs-target="#assam" type="button" role="tab" disabled>
+                                Assam
+                            </button>
+                            <button class="list-group-item list-group-item-action" id="odisha-tab" data-bs-toggle="tab"
+                                data-bs-target="#odisha" type="button" role="tab" disabled>
+                                Odisha
+                            </button>
+                            <button class="list-group-item list-group-item-action" id="up-tab" data-bs-toggle="tab"
+                                data-bs-target="#up" type="button" role="tab" disabled>
+                                Uttar Pradesh
+                            </button>
+
                             <button class="list-group-item list-group-item-action" id="jk-tab" data-bs-toggle="tab"
-                                data-bs-target="#jk" type="button" role="tab">
+                                data-bs-target="#jk" type="button" role="tab" disabled>
                                 Jammu & Kashmir
                             </button>
                         </div>
@@ -117,9 +118,29 @@
                     <!-- Content Area -->
                     <div class="col-md-9">
                         <div class="tab-content border p-3 bg-light rounded">
+
                             <!-- Jharkhand -->
                             <div class="tab-pane fade show active" id="jharkhand" role="tabpanel">
-                                <img src="./images/price list-01.png" alt="Jharkhand price list" class="img-fluid">
+                                <div class="text-end">
+                                    <a href="./images/pricelist/Price list Jharkhand.pdf" download
+                                        class="btn btn-dark d-inline-block rounded-pill px-4 animate__animated animate__pulse animate__infinite mb-3">
+                                        <i class="ri-download-fill me-1"></i>Download Price List
+                                    </a>
+                                </div>
+
+                                <img src="./images/price_list_jknd.jpeg" alt="Jharkhand price list" class="img-fluid">
+                            </div>
+
+                            <!-- Rajasthan -->
+                            <div class="tab-pane fade" id="rajasthan" role="tabpanel">
+                                <div class="text-end">
+                                    <a href="./images/pricelist/Price list Rajashtan.pdf" download
+                                        class="btn btn-dark d-inline-block rounded-pill px-4 animate__animated animate__pulse animate__infinite mb-3">
+                                        <i class="ri-download-fill me-1"></i>Download Price List
+                                    </a>
+                                </div>
+                                <img src="./images/price_list_rajasthan.jpeg" alt="Jharkhand price list"
+                                    class="img-fluid">
                             </div>
 
                             <!-- Bihar -->
@@ -147,10 +168,7 @@
                                 <p>Price List for Uttar Pradesh will be updated here.</p>
                             </div>
 
-                            <!-- Rajasthan -->
-                            <div class="tab-pane fade" id="rajasthan" role="tabpanel">
-                                <p>Price List for Rajasthan will be updated here.</p>
-                            </div>
+
 
                             <!-- Jammu & Kashmir -->
                             <div class="tab-pane fade" id="jk" role="tabpanel">

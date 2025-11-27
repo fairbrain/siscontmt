@@ -730,7 +730,7 @@ footer .container {
 }
 
 footer .logo {
-    border-radius: 1rem 0 0 1rem;
+    border-radius: 1rem;
 }
 
 footer .socials {
@@ -1109,6 +1109,9 @@ footer .grid-col:nth-child(4) a {
 
 }
 
+.navbar-brand img{
+    width: 220px;
+}
 
 
 @media(max-width: 768px) {
